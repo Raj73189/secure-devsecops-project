@@ -1,4 +1,3 @@
 import subprocess
 
-# insecure code (bandit will detect)
-subprocess.call("ls -l", shell=True)
+subprocess.run(["ls", "-l"])
