@@ -34,4 +34,6 @@ jobs:
         uses: aquasecurity/trivy-action@master
 
       - name: Scan Docker image with Trivy
-        run: trivy image insecure-app
+        uses: aquasecurity/trivy-action@master
+        with:
+           image-ref: insecure-app
