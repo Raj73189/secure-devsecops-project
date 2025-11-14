@@ -24,7 +24,7 @@ jobs:
       # -------------------------
       # Build Docker Image
       # -------------------------
-      - name: Build Docker image
+      - name: Build Docker Image
         run: docker build -t insecure-app .
 
       # -------------------------
@@ -33,7 +33,7 @@ jobs:
       - name: Install Trivy
         uses: aquasecurity/trivy-action@master
 
-      - name: Scan Docker image with Trivy
-        uses: aquasecurity/trivy-action@master
+      - name: Trivy Image Scan
+        uses: aquasecurity/trivy-action@0.20.0
         with:
-           image-ref: insecure-app
+          image-ref: insecure-app
